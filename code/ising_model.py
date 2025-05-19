@@ -50,7 +50,7 @@ def add_noise(v: np.ndarray, delta: float) -> np.ndarray:
     mask = np.random.rand(*v.shape) < delta
     return np.where(mask, noise, v)
 
-def simulate_p10_with_noise(N: int = 2000, p: int = 10, delta: float = 0.5, beta: float = 100) -> List[float]:
+def simulate_p10_with_noise(N: int = 2000, p: int = 10, delta: float = 0.5, beta: float = 100) -> list:
     """
     Simulate the evolution of noisy initial states and compute similarity.
     
