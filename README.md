@@ -160,7 +160,7 @@ $$
 
 使用计算模拟来计算$C(s, v)$:
 
-![alt text](/image.png)
+![alt text](/images/image.png)
 如图所示，随机初始化下s,v的相似度非常接近0。
 
 #### 求基态$\mathbf{s}$
@@ -185,13 +185,13 @@ $$
 
 
 经过计算模拟，得到结果：
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](/images/image-1.png)
+![alt text](/images/image-2.png)
 
 最终s与v的相似度为$\pm 1$，说明最终得到的$s_\text{final} = \pm v$。
 
 对多个系综平均，得到的平均相似度为0：
-![alt text](image-3.png)
+![alt text](/images/image-3.png)
 
 说明两个s的值出现的概率相同。
 
@@ -232,7 +232,7 @@ C_\mu = \frac{1}{N} \sum_{i=1}^{N} s_i^\mu v_i^\mu
 $$
 
 实验结果如下：
-![alt text](image-4.png)
+![alt text](/images/image-4.png)
 
 实验结果显示，大多数 $C_\mu$ 接近 1，说明系统成功恢复原始构型，即便初始态中含有 50% 噪声。
 
@@ -293,10 +293,13 @@ $$
 进一步缩小范围，得到：
 ![](./images/mean_of_similarity_distribution_p=[200,%20210,%20220,%20230,%20240,%20250,%20260,%20270,%20280,%20290].png)
 
+![](./images/mean_of_similarity_distribution_p=[200,%20210,%20220,%20230,%20240,%20250,%20260,%20270,%20280].png)
+
+
 ![](./images/similarity_distribution_p=[260,%20265,%20270,%20275,%20280,%20285]_2.png)
 
 上图数据有重叠。
-可以看出在临界值276左右开始消失记忆性。
+可以看出在临界值250左右开始消失记忆性。
 
 #### 2. 无记忆状态下的分布是否有某种规律？
 
@@ -308,10 +311,10 @@ $$
 ### iv.解释与思考
 iv. 你能解释你的发现吗？（2分）你还有什么别的思考？
 
-#### 在276处突变
+#### 在250左右处突变
 参考论文：Storing Infinite Numbers of Patterns in a Spin-Glass Model of Neural Networks
 
-我们观察到相似度 $C(s, v)$ 的均值在 $p \approx 276$ 左右发生突变，这与 Hopfield 网络理论的容量极限 $p_{\text{max}} \approx 0.14 N$ 是一致的。这一突变对应从“有记忆”到“无记忆”状态的转变。
+我们观察到相似度 $C(s, v)$ 的均值在 $p \approx 250$ 左右发生突变，这与 Hopfield 网络理论的容量极限 $p_{\text{max}} \approx 0.14 N$ 是一致的。这一突变对应从“有记忆”到“无记忆”状态的转变。
 
 #### 非记忆处类似高斯分布
 当 $p$ 进一步增大（例如 $p = 400$）时，相似度分布呈现高斯分布特征，说明系统最终状态趋于随机。此时能量面复杂、包含大量局部极小值，系统难以回到特定参考构型。
@@ -348,4 +351,4 @@ $p$ 增大时，系统能量函数的局部极小值数目迅速增加，类似�
 - 模型可用于类脑计算与神经记忆研究，也可拓展到非平衡统计物理研究中
 
 
-代码见：github/jtzhao29/Computational_Physics_10
+代码见：[github/jtzhao29/Computational_Physics_10](https://github.com/jtzhao29/Computational_Physics_10)

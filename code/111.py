@@ -53,15 +53,15 @@ def simulate_and_plot_distribution(N: int, p_values: List[int], delta: float, be
 
 if __name__ == "__main__":
     N = 2000
-    p_values = [274,275,276,277,278,279,280]
-    # p_values = [200,210,220,230,240,250,260,270,280,290]
+    # p_values = [274,275,276,277,278,279,280]
+    p_values = [200,210,220,230,240,250,260,270,280,290]
     # p_values = [50,100]
 
     # p_values = [50,500]
     delta = 0.5
     beta = 1e10
 
-    simu_set=simulate_and_plot_distribution(N, p_values, delta, beta,50)
+    simu_set=simulate_and_plot_distribution(N, p_values, delta, beta,30)
     print(simu_set)
     print("Similarity distribution plot savedas similarity_distribution.png")
     plt.figure(figsize=(10, 6))
